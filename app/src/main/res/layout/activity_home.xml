@@ -19,10 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="57dp" />]
+        app:layout_constraintGuide_begin="57dp" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/NumsQuantity"
+        android:labelFor="@id/NumsQuantity"
+        android:inputType="number"
+        android:gravity="center"
+        android:autofillHints="@android:string/autofill"
         android:layout_width="96dp"
         android:layout_height="75dp"
         android:layout_marginStart="28dp"
@@ -35,7 +39,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/NumOfSets"
+        android:labelFor="@id/NumOfSets"
+        android:inputType="number"
+        android:autofillHints="@android:string/autofill"
+        android:gravity="center"
         android:layout_width="96dp"
         android:layout_height="75dp"
         android:layout_marginStart="124dp"
@@ -45,10 +53,14 @@
         android:textAlignment="gravity"
         android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/NumsQuantity" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/Range"
+        android:labelFor="@id/Range"
+        android:inputType="number"
+        android:autofillHints="@android:string/autofill"
+        android:gravity="center"
         android:layout_width="96dp"
         android:layout_height="75dp"
         android:layout_marginStart="220dp"
@@ -58,9 +70,10 @@
         android:textAlignment="gravity"
         android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintTop_toBottomOf="@+id/NumOfSets" />
 
     <Button
+        android:onClick="onClick"
         android:layout_width="163dp"
         android:layout_height="69dp"
         android:layout_marginStart="88dp"
@@ -70,6 +83,6 @@
         android:text="@string/draw"
         android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintTop_toBottomOf="@+id/Range" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
