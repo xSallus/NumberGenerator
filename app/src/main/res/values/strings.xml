@@ -3,4 +3,5 @@
     <string name="img">Image asset</string>
     <string name="copyright1">A xSallus project</string>
     <string name="copyright2">All rights reserved</string>
+    <string name="draw">Draw numbers</string>
 </resources>
