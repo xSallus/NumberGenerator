@@ -9,11 +9,18 @@
         android:roundIcon="@mipmap/ic_icon_custom_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home">
+        <activity android:name=".Output" android:theme="@style/AppTheme.PopupWindow">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Home">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity">

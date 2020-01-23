@@ -2,19 +2,17 @@ package com.example.app.numgenerator;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-
-import regradenegocio.NGenerator;
 
 public class Home extends AppCompatActivity {
 
     EditText range;
     EditText nums;
     EditText sets;
-    NGenerator generator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +37,9 @@ public class Home extends AppCompatActivity {
         String ranGe = range.getText().toString();
         String nuMs = nums.getText().toString();
         String seTs = sets.getText().toString();
+
+        Intent i = new Intent(getBaseContext(), Output.class);
+        startActivity(i);
 
         range.setText(null);
         nums.setText(null);
