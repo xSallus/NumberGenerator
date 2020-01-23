@@ -36,6 +36,10 @@ public class Home extends AppCompatActivity {
     }
 
     public void onClick(View view){
+        String ranGe = range.getText().toString();
+        String nuMs = nums.getText().toString();
+        String seTs = sets.getText().toString();
+
         range.setText(null);
         nums.setText(null);
         sets.setText(null);
