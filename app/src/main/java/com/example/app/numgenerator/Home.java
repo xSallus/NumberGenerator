@@ -39,6 +39,9 @@ public class Home extends AppCompatActivity {
         String seTs = sets.getText().toString();
 
         Intent i = new Intent(getBaseContext(), Output.class);
+        i.putExtra("range", ranGe);
+        i.putExtra("sets", seTs);
+        i.putExtra("nums", nuMs);
         startActivity(i);
 
         range.setText(null);
