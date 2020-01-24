@@ -1,18 +1,22 @@
 package com.example.app.numgenerator;
 
+import android.view.inputmethod.InputMethodManager;
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.Activity;
+import android.widget.EditText;
 import android.content.Intent;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 
 public class Home extends AppCompatActivity {
 
-    EditText range;
-    EditText nums;
-    EditText sets;
+    public static final String EXTRA_RANGE = "com.example.myfirstapp.RANGE";
+    public static final String EXTRA_NUMS = "com.example.myfirstapp.NUMS";
+    public static final String EXTRA_SETS = "com.example.myfirstapp.SETS";
+
+    public EditText range;
+    public EditText nums;
+    public EditText sets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +38,11 @@ public class Home extends AppCompatActivity {
     }
 
     public void onClick(View view){
-        Intent i = new Intent(getBaseContext(), Output.class);
-        i.putExtra("sets", sets.getText().toString());
-        i.putExtra("nums", nums.getText().toString());
-        i.putExtra("range", range.getText().toString());
-        startActivity(i);
+        Intent intent = new Intent(Home.this, Output.class);
+        intent.putExtra(EXTRA_SETS, sets.getText().toString());
+        intent.putExtra(EXTRA_NUMS, nums.getText().toString());
+        intent.putExtra(EXTRA_RANGE, range.getText().toString());
+        startActivity(intent);
 
         range.setText(null);
         nums.setText(null);
