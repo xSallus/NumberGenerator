@@ -34,10 +34,10 @@ public class Home extends AppCompatActivity {
     }
 
     public void onClick(View view){
-        String seTs = sets.getText().toString();
-
         Intent i = new Intent(getBaseContext(), Output.class);
-        i.putExtra("sets", seTs);
+        i.putExtra("sets", sets.getText().toString());
+        i.putExtra("nums", nums.getText().toString());
+        i.putExtra("range", range.getText().toString());
         startActivity(i);
 
         range.setText(null);
