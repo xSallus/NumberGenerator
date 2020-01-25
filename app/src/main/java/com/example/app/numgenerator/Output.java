@@ -11,9 +11,9 @@ import android.os.Bundle;
 public class Output extends AppCompatActivity {
     public LinearLayout outputs;
     public NGenerator generator;
-    public String range;
-    public String nums;
-    public String sets;
+    public Integer range;
+    public Integer nums;
+    public Integer sets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,9 @@ public class Output extends AppCompatActivity {
         setContentView(R.layout.activity_output);
 
         Intent intent = getIntent();
-        sets = intent.getStringExtra(Home.EXTRA_SETS);
-        nums = intent.getStringExtra(Home.EXTRA_NUMS);
-        range = intent.getStringExtra(Home.EXTRA_RANGE);
+        sets = intent.getIntExtra(Home.EXTRA_SETS, 0);
+        nums = intent.getIntExtra(Home.EXTRA_NUMS, 0);
+        range = intent.getIntExtra(Home.EXTRA_RANGE, 0);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -31,9 +31,9 @@ public class Output extends AppCompatActivity {
         int height = dm.heightPixels;
         getWindow().setLayout((int)(width*0.85), (int)(height*0.85));
 
-        for (int k=0; k<Integer.parseInt(sets); k++) {
+        for (int k=0; k<sets; k++) {
 
-            generator = new NGenerator(Integer.parseInt(nums),Integer.parseInt(range));
+            generator = new NGenerator(nums,range);
 
             outputs = findViewById(R.id.output);
             TextView textView = new TextView(this);
