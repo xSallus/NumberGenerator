@@ -1,15 +1,13 @@
 package com.example.app.numgenerator;
 
-import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
 import android.util.DisplayMetrics;
-import android.view.Gravity;
 import android.widget.LinearLayout;
 import regradenegocio.NGenerator;
 import android.widget.TextView;
 import android.content.Intent;
+import android.graphics.Color;
+import android.view.Gravity;
 import android.os.Bundle;
 
 public class Output extends AppCompatActivity {
