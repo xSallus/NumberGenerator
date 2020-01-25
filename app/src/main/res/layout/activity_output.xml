@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:alpha=".65"
-    android:background="@drawable/round_shape"
-    android:backgroundTint="@android:color/black"
+    android:background="@android:color/black"
     tools:context=".Output">
 
     <ScrollView

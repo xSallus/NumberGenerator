@@ -1,7 +1,11 @@
 package com.example.app.numgenerator;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.widget.LinearLayout;
 import regradenegocio.NGenerator;
 import android.widget.TextView;
@@ -44,6 +48,9 @@ public class Output extends AppCompatActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT
             );
             textView.setLayoutParams(params);
+            textView.setTextColor(Color.WHITE);
+            textView.setTextSize(18);
+            textView.setGravity(Gravity.CENTER);
             outputs.addView(textView);
         }
     }
