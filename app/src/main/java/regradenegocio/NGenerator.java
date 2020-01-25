@@ -14,7 +14,8 @@ public class NGenerator {
     }
 
     public void ngenerate(int nums, int seed) {
-        for(int i=0;i<nums;i++) {
+        numset = new Integer[nums];
+        for(int i=0;i<numset.length;i++) {
             numset[i] = rd.nextInt(seed);
         }
     }
